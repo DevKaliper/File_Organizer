@@ -33,9 +33,6 @@ def create_dirs(path):
         for file in extentions:
             if file in EXTENSIONS[dir] and not os.path.exists(path+dir):
                 os.mkdir(path+dir)
-                
-        
-
 
 #Moves the files
 def move_files(path, file, ext):
