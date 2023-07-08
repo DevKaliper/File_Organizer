@@ -36,6 +36,7 @@ def create_dirs(path):
                 
         
 
+
 #Moves the files
 def move_files(path, file, ext):
     for dir in EXTENSIONS.keys():
