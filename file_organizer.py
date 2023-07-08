@@ -4,10 +4,12 @@ import shutil
 EXTENSIONS = {
     "Fotos": [".jpg", ".png", ".jpeg"],
     "Videos":[".mp4", ".mov", ".avi", ".wav"],
+    "Gif":[".gif"],
     "Audio":[".mp3"],
     "PDF": [".pdf"],
-    "Word":[".docx", ".dotx"],
-    "Programas":[".exe"]
+    "Office":[ ".dotx", '.xlsx', '.mdb', '.accdb', '.csv', '.pptx', '.docx', ".doc"],
+    "Programas":[".exe"],
+    "Archivos_para_comprimir": [".rar", ".zip"]
 
 }
 
@@ -56,8 +58,6 @@ def organizer(path):
     for file in os.listdir(path):
         ext = os.path.splitext(file)[1]
         move_files(path, file, ext)
-
-
 
 
 
