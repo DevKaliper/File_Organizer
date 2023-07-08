@@ -1,3 +1,6 @@
+# This code organizes your files by extension. You just have to choose the path you want to organize and it will do the rest for you.
+
+
 import os
 import shutil
 
@@ -13,6 +16,7 @@ EXTENSIONS = {
 
 }
 
+#Returns the extension of all files in the path
 def get_extentions(path):
     extentions = []
     for iteration in os.listdir(path):
@@ -22,8 +26,7 @@ def get_extentions(path):
     
     return extentions
 
-
-
+#Creates the directories
 def create_dirs(path):
     extentions = get_extentions(path)
     for dir in EXTENSIONS.keys():
@@ -33,6 +36,7 @@ def create_dirs(path):
                 
         
 
+#Moves the files
 def move_files(path, file, ext):
     for dir in EXTENSIONS.keys():
         if ext in EXTENSIONS[dir]:
@@ -41,8 +45,14 @@ def move_files(path, file, ext):
             except:
                 print(f"Esta ruta: {path+file}  dio error al intentar moverla.")
 
+#Main function
+def organizer(path):
+    create_dirs(path)
+    for file in os.listdir(path):
+        ext = os.path.splitext(file)[1]
+        move_files(path, file, ext)
 
-
+#The path you want to organize
 while True:
     path = input("Dame la ruta la cual quieres organizar: ")
     if os.path.exists(path):
@@ -51,16 +61,7 @@ while True:
     
     print("Ruta no encontrada...")
 
-
-    
-def organizer(path):
-    create_dirs(path)
-    for file in os.listdir(path):
-        ext = os.path.splitext(file)[1]
-        move_files(path, file, ext)
-
-
-
+#Runs the program
 organizer(path)
 print(f"proceso terminado. la ruta es {path} ")
 
