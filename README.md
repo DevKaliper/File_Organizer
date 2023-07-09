@@ -1,4 +1,4 @@
-# File_Organizer
+# File Organizer
 
 Este programa organiza automáticamente los archivos en un directorio según su extensión. Solo tienes que seleccionar la ruta que deseas organizar y el programa hará el resto por ti.
 
