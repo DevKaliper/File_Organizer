@@ -14,15 +14,6 @@ Este programa organiza automáticamente los archivos en un directorio según su 
 - Python 3.x
 - Bibliotecas Python: os, shutil, ctypes
 
-## Uso
-
-1. Clona o descarga este repositorio en tu máquina local.
-2. Abre una terminal y navega hasta el directorio del repositorio.
-3. Ejecuta el siguiente comando para instalar las dependencias:
-
-   ```shell
-   pip install -r requirements.txt
-
 ## Selecciona una opción según tus preferencias:
 
 1. Ruta actual: Organiza la ruta actual en la que se encuentra el programa.
