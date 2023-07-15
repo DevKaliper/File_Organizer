@@ -19,3 +19,10 @@ Este programa organiza automáticamente los archivos en un directorio según su 
 1. Ruta actual: Organiza la ruta actual en la que se encuentra el programa.
 2. Introducir ruta personalizada: Ingresa una ruta específica para organizar.
 Sigue las instrucciones en la terminal para seleccionar la ruta y confirmar las acciones.
+
+
+
+## Interfaz gráfica (Beta)
+
+- Descarga el ejecutable. Está en la sección "Realeses"
+- Seleciona el directorio que deseas organizar 
