@@ -24,5 +24,5 @@ Sigue las instrucciones en la terminal para seleccionar la ruta y confirmar las 
 
 ## Interfaz gráfica (Beta)
 
-- Descarga el ejecutable. Está en la sección "Realeses"
+- Descarga el ejecutable. Está en la sección "Realeases"
 - Seleciona el directorio que deseas organizar 
