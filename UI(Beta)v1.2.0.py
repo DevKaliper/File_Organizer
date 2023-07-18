@@ -45,8 +45,7 @@ def move_files(path, file, ext):
             try:
                 shutil.move(path+file, path+dir)
             except:
-                print(
-                    f"Esta ruta: {path+file}  dio error al intentar moverla.")
+                error["text"] = f"Can't move the file: {file}", 
 
 
 
@@ -58,16 +57,6 @@ def organizer(path):
         move_files(path, file, ext)
 
 
-# The path you want to organize
-def pathFinder(path):
-
-    if os.path.exists(path):
-        path += "/"
-        organizer(path)
-        print("Process finished, check the path: ", path)
-
-    else:
-        print("Can't find the path: ", path)
 
 
 # The path you want to organize (the user selects the path with a window)
@@ -76,26 +65,26 @@ def select_dir():
     if os.path.exists(path):
         path += "/"
         organizer(path)
-        print("Process finished, check the path: ", path)
+        error["text"] = f"Process finished, check the path: {path}"
+        
     else:
-        print("Can't find the path: ", path)
+        error["text"] = f"Can't find the path: {path} " 
+        
 
-    print("Process finished")
+    done["text"] = "Thanks for using the program :)"
 
 
 root = Tk()
-root.title("Probando ttk")
+root.title("File organizer Beta 1.0")
+root.geometry("600x300")
+root.resizable(True, False)
+root.config(bg="white")
+choose_path = Button(root, text="Choose the path", command=select_dir , cursor="hand2", font=("Arial", 12))
+choose_path.pack(pady=20)
+error = Label(root, text="", bg="white", fg="red", font=("Arial", 9))
+error.pack(pady=20)
+done = Label(root, text="", bg="white", fg="green", font=("Arial", 12))
+done.pack(pady=20)
 
 
-root.geometry("300x200")
-entry = ttk.Entry()
-
-entry.place(x=100, y=50)
-button = ttk.Button(text="Seleciona directorio",
-                    command=select_dir).place(x=100, y=150)
-
-
-button = ttk.Button(text="Coloca la ruta a organizar",
-                    command=lambda: pathFinder(entry.get()))
-button.place(x=90, y=100)
 root.mainloop()
